@@ -1,0 +1,142 @@
+.l-header
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  +size(100%, 100vh)
+  background-image: linear-gradient(to bottom, $color-gray 65%, rgba($color-gray, 0))
+  overflow: hidden
+  &__slogan-wrap
+    position: absolute
+    right: 5vw
+    top: 5rem
+    pointer-events: none
+    z-index: 20
+  &__slogan
+    font-size: 18rem
+    font-weight: 900
+    letter-spacing: 0.4rem
+    line-height: 1.2
+    color: $color-white
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      +size(7rem)
+      left: 68%
+      bottom: 54%
+      border-radius: 50%
+      border: 8px solid $color-white
+    &:first-child
+      position: absolute
+      left: -10px
+      top: -10px
+      color: $color-primary
+      &::after
+        border: 8px solid $color-primary
+
+  &__swiper-box
+    width: 100%
+    max-width: 1400px
+
+  &__swiper
+    transform: scale(1)
+    transition: transform 0.3s cubic-bezier(.6,.58,.59,1.58)
+    &:hover
+      transform: scale(1.05)
+
+  // 隱藏svg資料庫
+  &__svg-mask
+    position: absolute
+    +size(0)
+    pointer-events: none
+    overflow: hidden
+
+  &__img
+    +size(100%, auto)
+    transform-origin: center center
+    transform: scale(1)
+    transition: transform 10s
+
+  .swiper-slide-active &, .swiper-slide-duplicate-active &
+    &__img
+      transform: scale(1.1)
+
+/* -- header inner -- */
+.l-header-inner
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(100%, 40vh)
+  margin-top: 10rem
+  margin-bottom: 12rem
+  background-image: url('../img/footer/footer-bg.jpg')
+  background-size: cover
+  background-position: cennter cennter
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    bottom: 100%
+    +size(100%, 10rem)
+    background-color: $color-primary
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    +size(100%)
+    background-color: $color-primary
+    mix-blend-mode: multiply
+  &__blockade
+    top: -35rem
+
+@media (max-width: 1024px)
+  .l-header
+    &__swiper-box
+      padding-right: 2vw
+      padding-left: 10vw
+    &__slogan
+      font-size: 15rem
+    &__slogan::after
+      +size(6.4rem)
+
+@media (max-width: 1024px) and (orientation: portrait)
+  .l-header
+    height: 60vh
+    align-items: flex-end
+
+  /* -- header-inner -- */
+  .l-header-inner
+    &__blockade
+      top: -50rem
+
+@media (max-width: 991.98px)
+  .l-header
+    &__slogan
+      font-size: 12rem
+    &__slogan::after
+      +size(5rem)
+      border: 7px solid $color-gray-light
+
+@media (max-width: 767.98px)
+  .l-header
+    height: 64vh
+
+@media (max-width: 575.98px)
+  .l-header
+    &__swiper-box
+      padding-left: 6vw
+    &__slogan-wrap
+      right: 6vw
+      top: 30vw
+    &__slogan
+      font-size: 7rem
+    &__slogan::after
+      +size(3.6rem)
+      border: 5px solid $color-gray-light
+
+  /* -- header inner -- */
+  .l-header-inner
+    margin-bottom: 12vw
+    &__blockade
+      top: -38rem

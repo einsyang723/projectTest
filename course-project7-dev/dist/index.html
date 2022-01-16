@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jarvis.huihuidesign.com.tw/jarvis-course/megaport/">
+    <meta property="og:image" content="https://jarvis.huihuidesign.com.tw/jarvis-course/megaport/img/og/og.jpg">
+    <meta property="og:description" content="赫綵設計學院 - 網頁前端設計實務｜整合應用（Project9），建立開發環境並實作完整互動式網站。">
+    <meta name="description" content="赫綵設計學院 - 網頁前端設計實務｜整合應用（Project9），建立開發環境並實作完整互動式網站。">
+    <link rel="shortcut icon" href="img/logo/logo-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo/logo-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta property="og:title" content="（專案實作）Megaport Festival 大港開唱 2021">
+    <title>（專案實作）Megaport Festival 大港開唱 2021</title>
+  </head>
+  <body>
+    <div class="is-home" id="app">
+      <nav class="c-navbar"><a class="c-navbar__logo-wrap" href="index.html"><img src="img/logo/logo.svg" alt="大港開唱"></a>
+        <div class="o-burger c-navbar__burger" onclick="handleBurger()">
+          <div class="o-burger__wrap">
+            <div class="o-burger__line"></div>
+            <div class="o-burger__line"></div>
+            <div class="o-burger__line"></div>
+          </div>
+        </div>
+        <div class="c-navbar__body">
+          <div class="c-navbar__menu"> 
+            <ul class="c-navbar__btn-box">
+              <li class="c-navbar__btn-wrap"> <a class="c-navbar__btn" href="##">
+                  <div class="c-navbar__text --en">INFO</div>
+                  <div class="c-navbar__text --zh">相關資訊</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="##">
+                  <div class="c-navbar__text --en">NEWS</div>
+                  <div class="c-navbar__text --zh">最新消息</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="##">
+                  <div class="c-navbar__text --en">ARTISTS</div>
+                  <div class="c-navbar__text --zh">藝人名單</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="##">
+                  <div class="c-navbar__text --en">TIMETABLE</div>
+                  <div class="c-navbar__text --zh">節目表</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="##">
+                  <div class="c-navbar__text --en">TICKET</div>
+                  <div class="c-navbar__text --zh">購票資訊</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="map.html">
+                  <div class="c-navbar__text --en">MAP</div>
+                  <div class="c-navbar__text --zh">地圖導覽</div></a></li>
+            </ul>
+            <ul class="c-navbar__link-box">
+              <li class="c-navbar__link-wrap"><a href="https://www.facebook.com/megaportfest/" target="_blank"> <i class="fab fa-facebook c-navbar__icon"></i></a></li>
+              <li class="c-navbar__link-wrap"><a href="https://www.instagram.com/megaportfest/" target="_blank"><i class="fab fa-instagram c-navbar__icon"></i></a></li>
+              <li class="c-navbar__link-wrap"><a href="https://www.youtube.com/channel/UC7xWU14_GGYKVqoSLg1M8EQ/feed" target="_blank"><i class="fab fa-youtube c-navbar__icon"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <header class="l-header" data-aos="fade-in">
+        <div class="l-header__slogan-wrap js-parallax" data-input-element=".l-header">
+          <h1 class="l-header__slogan" data-depth="-0.2">人生<br>音樂祭</h1>
+          <h1 class="l-header__slogan" data-depth="-0.1">人生<br>音樂祭</h1>
+        </div>
+        <div class="l-header__swiper-box">
+          <svg class="l-header__svg-mask">
+            <defs>
+              <mask id="banner-shape" fill="white">
+                <path d="M101.984 0L1486.33 178.762L1270.23 788.591L0 829.293L101.984 0Z"></path>
+              </mask>
+            </defs>
+          </svg>
+          <div class="swiper l-header__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <svg viewBox="0 0 1500 900">
+                  <g mask="url(#banner-shape)">
+                    <image class="l-header__img" xlink:href="img/banner/banner-img01.jpg" width="100%" height="100%"></image>
+                  </g>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <svg viewBox="0 0 1500 900">
+                  <g mask="url(#banner-shape)">
+                    <image class="l-header__img" xlink:href="img/banner/banner-img02.jpg" width="100%" height="100%"></image>
+                  </g>
+                </svg>
+              </div>
+              <div class="swiper-slide">
+                <svg viewBox="0 0 1500 900">
+                  <g mask="url(#banner-shape)">
+                    <image class="l-header__img" xlink:href="img/banner/banner-img03.jpg" width="100%" height="100%"></image>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="l-main">
+        <section class="l-lineup">
+          <div class="c-blockade l-lineup__blockade">
+            <div class="c-blockade__line">
+              <div class="c-blockade__text" uk-parallax="viewport: 0.9; x: 70vw,0,-110vw">台灣最生猛海派的音樂祭 - 大港開唱</div>
+            </div>
+            <div class="c-blockade__line">
+              <div class="c-blockade__text" uk-parallax="viewport: 0.8; x: -50vw,0,100vw">台灣最生猛海派的音樂祭 - 大港開唱</div>
+            </div>
+            <div class="c-blockade__line">
+              <div class="c-blockade__text" uk-parallax="viewport: 0.8; easing: 1.5; x: 100vw,-40vw,-60vw">台灣最生猛海派的音樂祭 - 大港開唱</div>
+            </div>
+            <div class="c-blockade__line">
+              <div class="c-blockade__text" uk-parallax="viewport: 0.7; x: -100vw,50vw,90vw">台灣最生猛海派的音樂祭 - 大港開唱</div>
+            </div>
+          </div>
+          <div class="l-lineup__sticky">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <div class="l-lineup__title-section" data-aos="fade-up">
+                    <h2 class="u-title-section">LINEUP </h2>
+                    <h2 class="u-subtitle-section">MEGAPORT FESTIVAL</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row l-lineup__box js-parallax" data-input-element=".l-lineup"><a class="col-sm-5 l-lineup__wrap" href="##" data-depth="0.1">
+                  <article class="l-lineup__artist --artist01" data-aos="fade-up">
+                    <h3 class="l-lineup__title --title01 u-title-large">9m88</h3>
+                    <div class="l-lineup__img-mask js-parallax" data-scalar-y="0" data-friction-x="0.4">
+                      <div class="l-lineup__glitch-wrap" data-depth="0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup01.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__glitch-wrap" data-depth="-0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup01.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__img-main"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup01.jpg" alt="大港開唱藝人名單"></div>
+                    </div>
+                  </article></a><a class="col-sm-7 l-lineup__wrap" href="##" data-depth="-0.1">
+                  <article class="l-lineup__artist --artist02" data-aos="fade-up">
+                    <h3 class="l-lineup__title --title02 u-title-large">恆月三途</h3>
+                    <div class="l-lineup__img-mask js-parallax" data-scalar-y="0" data-friction-x="0.4">
+                      <div class="l-lineup__glitch-wrap" data-depth="0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup02.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__glitch-wrap" data-depth="-0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup02.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__img-main"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup02.jpg" alt="大港開唱藝人名單"></div>
+                    </div>
+                  </article></a><a class="col-lg-4 col-sm-7 l-lineup__wrap" href="##" data-depth="-0.2">
+                  <article class="l-lineup__artist --artist03" data-aos="fade-up">
+                    <h3 class="l-lineup__title --title03 u-title-large">Beyound Cure</h3>
+                    <div class="l-lineup__img-mask js-parallax" data-scalar-y="0" data-friction-x="0.4">
+                      <div class="l-lineup__glitch-wrap" data-depth="0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup03.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__glitch-wrap" data-depth="-0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup03.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__img-main"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup03.jpg" alt="大港開唱藝人名單"></div>
+                    </div>
+                  </article></a><a class="col-lg-4 col-sm-5 l-lineup__wrap" href="##" data-depth="0.2">
+                  <article class="l-lineup__artist --artist04" data-aos="fade-up">
+                    <h3 class="l-lineup__title --title04 u-title-large">Dudu King</h3>
+                    <div class="l-lineup__img-mask js-parallax" data-scalar-y="0" data-friction-x="0.4">
+                      <div class="l-lineup__glitch-wrap" data-depth="0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup04.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__glitch-wrap" data-depth="-0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup04.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__img-main"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup04.jpg" alt="大港開唱藝人名單"></div>
+                    </div>
+                  </article></a><a class="col-lg-4 col-sm-5 l-lineup__wrap" href="##" data-depth="-0.1">
+                  <article class="l-lineup__artist --artist05" data-aos="fade-up">
+                    <h3 class="l-lineup__title --title05 u-title-large">Da Wang</h3>
+                    <div class="l-lineup__img-mask js-parallax" data-scalar-y="0" data-friction-x="0.4">
+                      <div class="l-lineup__glitch-wrap" data-depth="0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup05.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__glitch-wrap" data-depth="-0.2"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup05.jpg" alt="大港開唱藝人名單"></div>
+                      <div class="l-lineup__img-main"><img class="js-lazy l-lineup__img" data-src="img/lineup/lineup05.jpg" alt="大港開唱藝人名單"></div>
+                    </div>
+                  </article></a></div>
+            </div>
+          </div>
+        </section>
+        <section class="l-news">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="l-news__title-section" data-aos="fade-up">
+                  <h2 class="u-title-section">NEWS</h2>
+                  <h2 class="u-subtitle-section">MEGAPORT FESTIVAL</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-news__swiper-area">
+            <div class="l-news__btn-swiper --pre"><i class="fas fa-arrow-left"></i></div>
+            <div class="l-news__btn-swiper --next"><i class="fas fa-arrow-right"></i></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="swiper l-news__swiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news01.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">04.12</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">大港 防疫公告！</h3>
+                              <p class="c-card__desc">【入場需先填寫 Line 實聯制問卷才能兌換手環】 如何填寫實聯制...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE</a></div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news02.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">05.10</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">金牌台啤x大港開唱 聯名限定上市</h3>
+                              <p class="c-card__desc">Untitled Document 為在地音樂乾一杯！ 金牌台啤x大港開唱聯名啤酒限定上市 高雄最具代表性的大型音樂...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE</a></div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news03.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">05.24</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">大港開唱 x MegaFun</h3>
+                              <p class="c-card__desc">✧ 好耍 ✧趣味 ✧足歡喜 大港娛樂特區MegaFun全方位手冊 . ** MEGADIVE 孤枝大夫 ** 輕鬆享受人體衝浪支...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE</a></div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news04.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">06.17</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">大港帥口罩</h3>
+                              <p class="c-card__desc">想要這個大港口罩嗎？填寫實聯制問卷就送給你 #只送不賣 #有大港單雙日票券者才可兌換...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE</a></div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news05.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">06.22</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">官方周邊 正式公佈！</h3>
+                              <p class="c-card__desc">敲破碗的大港周邊這不就來了嗎 . 定番款大港毛巾必收 漁夫帽門簾與工作衫首次登場 超搶眼...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE</a></div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide l-news__swiper-slide">
+                        <article class="c-card">
+                          <div class="c-card__img-mask"><img class="js-lazy" data-src="img/news/news06.jpg" alt="大港開唱最新消息"></div>
+                          <div class="c-card__body">
+                            <div class="c-card__date-wrap">
+                              <div class="c-card__date">2021</div>
+                              <div class="c-card__date">07.10</div>
+                            </div>
+                            <div class="c-card__content">
+                              <h3 class="c-card__title">大港線上直播 來囉！</h3>
+                              <p class="c-card__desc">沒買到大港票的朋朋，線上直播來啦 . 大港開唱與LINE TODAY獨家合作 #南霸天、 #女神龍...</p>
+                            </div>
+                            <div class="c-card__btn"><a class="o-btn" href="##">MORE </a></div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="l-about">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"> 
+                <div class="l-about__title-section" data-aos="fade-right">
+                  <h2 class="u-title-section">ABOUT</h2>
+                  <h2 class="u-subtitle-section">MEGAPORT FESTIVAL</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container l-about__container">
+            <div class="row">
+              <div class="col-md-6 order-md-0 order-2" data-aos="fade-right">
+                <div class="l-about__img-mask"> 
+                  <div class="l-about__img" uk-parallax="bgy: -100"></div>
+                </div>
+              </div>
+              <div class="col-md-6 order-md-0 order-1">
+                <div class="l-about__content-wrap">
+                  <div class="l-about__content" data-aos="fade-up"> 
+                    <h3 class="l-about__title u-title">2021年即將邁入第十二屆的《大港開唱》</h3>
+                    <p class="l-about__desc u-text-desc">每年三月於高雄舉辦的大型音樂祭典，受到全台灣及日本香港年輕觀眾的喜愛，近年已成為台灣最具指標性的大型戶外音樂祭活動。</p>
+                  </div>
+                  <div class="l-about__content" data-aos="fade-up">
+                    <h3 class="l-about__title u-title">「人生」與「音樂」</h3>
+                    <p class="l-about__desc u-text-desc">大港舉辦在高雄港邊，獨特的海港地景和人文風情，常勾起人生中各種酸甜苦辣的回憶。大港因此找來有著豐富人生歷程的知名藝人及業界前輩演出，或是與新一代的樂團或藝人一起合作，交融出出代之間的化學變化，往往成為當年度為人津津樂道的經典現場...</p>
+                  </div>
+                  <div class="l-about__btn" data-aos="fade-up"><a class="o-btn" href="##">MORE</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="l-footer" data-aos="fade-in">
+        <div class="o-gotop">
+          <div class="o-gotop__arrow"><i class="fas fa-long-arrow-alt-up"></i></div>
+          <div class="o-gotop__text">TOP</div>
+        </div>
+        <div class="l-footer__date-mask" uk-parallax="bgy: 100"><img class="l-footer__img-date" src="img/footer/footer-date.svg" alt="大港開唱資訊"></div>
+        <div class="l-footer__sitemap">
+          <ul class="l-footer__btn-box">
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##">
+                <div class="l-footer__text --en u-text-footer">INFO</div>
+                <div class="l-footer__text --zh u-text-footer">相關資訊</div></a></li>
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##">
+                <div class="l-footer__text --en u-text-footer">NEWS</div>
+                <div class="l-footer__text --zh u-text-footer">最新消息</div></a></li>
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##">
+                <div class="l-footer__text --en u-text-footer">ARTISTS</div>
+                <div class="l-footer__text --zh u-text-footer">藝人名單</div></a></li>
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##">
+                <div class="l-footer__text --en u-text-footer">TIMETABLE</div>
+                <div class="l-footer__text --zh u-text-footer">節目表</div></a></li>
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="##">
+                <div class="l-footer__text --en u-text-footer">TICKET</div>
+                <div class="l-footer__text --zh u-text-footer">購票資訊</div></a></li>
+            <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="map.html">
+                <div class="l-footer__text --en u-text-footer">MAP</div>
+                <div class="l-footer__text --zh u-text-footer">地圖導覽</div></a></li>
+          </ul>
+          <ul class="l-footer__link-box">
+            <li class="l-footer__link-wrap"><a href="https://www.facebook.com//megaportfest/" target="_blank"><i class="fab fa-facebook l-footer__icon"></i></a></li>
+            <li class="l-footer__link-wrap"><a href="https://www.instagram.com/megaportfest/" target="_blank"><i class="fab fa-instagram l-footer__icon"></i></a></li>
+            <li class="l-footer__link-wrap"><a href="https://www.youtube.com/channel/UC7xWU14_GGYKVqoSLg1M8EQ/feed" target="_blank"><i class="fab fa-youtube l-footer__icon"></i></a></li>
+          </ul>
+          <div class="l-footer__copyright u-text-copyright">@copyright Jarvis Course All rights reserved</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/lazyload.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 1200,
+        once: false
+      })
+    </script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

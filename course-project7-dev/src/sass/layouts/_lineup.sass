@@ -1,0 +1,142 @@
+.l-lineup
+  padding-top: 6rem
+  &::after
+    content: ''
+    display: block
+    // 撐高 .l-lineup 去控制 sticky 空間
+    +size(100%, 20rem)
+  &__blockade
+    top: -10%
+  &__sticky
+    position: sticky
+    position: -webkit-sticky
+    top: 10rem
+  &__title-section 
+    margin-bottom: 4rem
+  &__box
+    margin-top: -18rem
+  &__wrap
+    // important 因為 parallax 插件會影響
+    display: flex !important
+    align-items: flex-start
+    position: relative !important
+    // border: 6px solid #000
+    margin-top: 18rem
+    &:nth-child(1)
+      justify-content: flex-end
+      align-items: flex-end
+    &:nth-child(2)
+      justify-content: center
+    &:nth-child(4)
+      justify-content: flex-end
+    &:nth-child(5)
+      justify-content: flex-end
+      align-items: flex-end
+
+  // &__wrap:nth-child(2) &__artist
+  &__artist
+    max-width: 45rem
+    filter: grayscale(1)
+    pointer-events: auto
+    transition: filter 0.3s
+    &:hover
+      filter: grayscale(0)
+    &.--artist01
+      bottom: -4rem
+    &.--artist02, &.--artist03
+      max-width: 56rem
+    &.--artist04
+      right: -10rem
+      top: -6rem
+
+  &__title
+    position: absolute
+    white-space: nowrap
+    z-index: 20
+    &.--title01
+      right: -20%
+      top: 20%
+    &.--title02
+      left: 10%
+      bottom: -8%
+    &.--title03
+      left: 10%
+      top: -24%
+    &.--title04
+      left: 10%
+      bottom: -8%
+    &.--title05
+      right: 10%
+      top: -10%
+
+  &__glitch-wrap
+    position: absolute
+    width: 100%
+    left: 10px
+    top: 0
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      +size(100%)
+      left: 0
+      top: 0
+      background-color: $color-primary
+      mix-blend-mode: multiply
+      z-index: 10
+    &:first-child
+      left: -10px
+      &::after
+        background-color: $color-secondary
+  &__img-main, &__glitch-wrap:nth-child(2)
+    mix-blend-mode: lighten
+    z-index: 10
+
+@media (max-width: 1024px) and (orientation: portrait)
+  .l-lineup
+    padding-top: 10vw
+    &__sticky
+      top: 14vw
+
+@media (max-width: 991.98px)
+  .l-lineup
+    &__box
+      justify-content: center
+      // overflow: hidden
+    &__wrap:nth-child(5)
+      margin-top: -6rem
+    &__artist.--artist04
+      right: 0
+
+    &__title
+      &.--title01
+        right: 10%
+        top: -20%
+
+@media (max-width: 575.98px)
+  .l-lineup
+    padding: 12vw 2vw 0
+    &__title-section
+      margin-bottom: 12vw
+    &__box
+      margin-top: -10vw
+      overflow: hidden
+    &__wrap
+      margin-top: 10vw
+      // 991.98px 的時候吃到 -6rem
+      &:nth-child(5)
+        margin: 0
+    &__artist
+      &.--artist01
+        left: 10vw
+        bottom: 0
+      &.--artist02
+        left: -10vw
+      &.--artist03
+        top: 14vw
+      &.--artist04
+        right: -10vw
+        top: 0
+      &.--artist05
+        top: 10vw
+      

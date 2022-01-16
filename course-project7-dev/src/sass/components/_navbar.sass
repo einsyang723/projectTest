@@ -1,0 +1,130 @@
+.c-navbar
+  position: absolute
+  left: 0
+  top: 0
+  padding: 5rem 5vw
+  z-index: 999999
+  *
+    color: $color-white
+  &__logo-wrap
+    max-width: 24rem
+  &__body
+    display: inline-block
+    margin-top: 7rem
+  &__btn-wrap:hover &__btn
+    transform: rotateX(-180deg)
+  &__btn
+    transform-style: preserve-3d
+    padding: 1rem 0
+    transition: 0.5s
+  &__btn.is-active &__text
+    color: $color-secondary
+  &__text
+    font-size: 1.9rem
+    font-weight: 900
+    line-height: 1.5
+    backface-visibility: hidden
+    white-space: nowrap
+    &.--en
+      font-family: $font-en
+      z-index: 10
+    &.--zh
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%) rotateX(-180deg)
+      color: $color-primary
+      // opacity: 0
+
+  &__link-box
+    display: flex
+    align-items: center
+    margin-top: 3rem
+  &__link-wrap
+    margin-right: 1rem
+  &__link-wrap:hover &__icon
+    color: $color-primary
+  &__icon
+    font-size: 2.4rem
+    transition: 0.3s
+
+// is-fixed
+.c-navbar
+  &.is-fixed
+    display: flex
+    align-items: center
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    padding: 2.4rem 4vw
+    background-color: $color-gray
+    box-shadow: 0 0 10px $color-primary
+
+  &.is-fixed:not(.is-burger) &
+    &__body
+      margin-left: auto
+      margin-top: 0
+    &__menu
+      display: flex
+      align-items: center
+    &__btn-box
+      display: flex
+    &__btn-wrap
+      margin-left: 2vw
+      margin-bottom: 0
+    &__text.--zh
+      left: 50%
+      transform: translate(-50%, -50%) rotateX(-180deg)
+    &__link-box
+      margin-left: 2vw
+      margin-top: 0
+
+@media (max-width: 767.98px)
+  .c-navbar
+    &__burger
+      margin-left: 0.5rem
+      margin-top: 2rem
+    &__body
+      position: fixed
+      +size(100%, 0)
+      left: 0
+      top: 0
+      margin-top: 0
+      background-color: rgba($color-gray, 0.8)
+      overflow: hidden
+      transition: height 0.7s 0.7s
+    &__menu
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      +size(100%, auto)
+      min-height: 100%
+      padding: 10rem 0
+      transform: translateY(-1rem)
+      opacity: 0
+      transition: transform 0.7s, opacity 0.7s
+    &__btn-box
+      text-align: center
+    &__text
+      font-size: 2.8rem
+      &.--zh
+        left: 50%
+        transform: translate(-50%, -50%) rotateX(-180deg)
+    &__icon
+      font-size: 2.8rem
+
+  .c-navbar
+    &.is-fixed &__burger
+      margin-left: auto
+      margin-top: 0
+
+    &.is-opened &
+      &__body
+        height: 100vh
+        transition: height 0.7s
+      &__menu
+        transform: translateY(0)
+        opacity: 1
+        transition: transform 0.7s 0.7s, opacity 0.7s 0.7s
